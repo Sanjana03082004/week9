@@ -1,12 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment
-metadata:
+kind: Deployment #for deployment
+metadata: 
   name: registration-deployment
-spec:
+spec: #how many deployments
   replicas: 4
   selector:
     matchLabels:
-      app: registration
+      app: registration 
   template:
     metadata:
       labels:
@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: registration
-        image: sriludone/registration:v1   # use your Docker Hub image
+        image: sanjana3082004/registration:v1   # use your Docker Hub image
         ports:
         - containerPort: 5000
+
